@@ -1,0 +1,177 @@
+.btn.btn-primary.submit:hover {
+    background-color: #00b28c;
+}
+
+.btn.btn-primary.submit {
+    background-color: grey;
+    border: none;
+}
+
+#discord_link {
+    color: #e22882;
+}
+
+#sourceCode:hover {
+    color: chocolate;
+}
+
+option {
+    background-color: white !important;
+}
+
+#dropdownSubject {
+    width: 12em;
+    margin-top: 1em;
+}
+
+#dropdownUnit {
+    width: 8em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+#dropdownSolutionType {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#submitButton {
+    border: none;
+    color: white;
+    margin-left: 1em;
+    margin-top: 1em;
+    font-size: 16px;
+}
+
+.card {
+    margin-top: 3em;
+    max-width: 30%;
+}
+
+#submit {
+    color: white;
+    text-decoration: none;
+}
+
+#result {
+    margin-top: 2em;
+    max-width: 70%;
+}
+
+pre {
+    /*background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid green;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;*/
+    display: block;
+    border-left: 4px solid #dc3545;
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre;
+    color: #c5c8c6;
+    /*1d1f21*/
+    /*4b5052*/
+    background-color: #2d3031;
+}
+
+#codeResult {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #dropdownSubject {
+        width: 5em;
+        margin-top: 1em;
+    }
+    #dropdownUnit {
+        width: 5em;
+        margin-top: 1em;
+    }
+    #dropdownSolutionType {
+        width: 5em;
+        margin-top: 1em;
+    }
+}
+
+
+/*admin page*/
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.main-head {
+    height: 150px;
+    background: #FFF;
+}
+
+.sidenav {
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .login-form {
+        margin-top: 10%;
+    }
+    .register-form {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        margin-left: 40%;
+    }
+    .sidenav {
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+    .login-form {
+        margin-top: 80%;
+    }
+    .register-form {
+        margin-top: 20%;
+    }
+}
+
+.login-main-text {
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2 {
+    font-weight: 300;
+}
+
+.btn-black {
+    background-color: #000 !important;
+    color: #fff;
+}
