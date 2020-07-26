@@ -15,7 +15,7 @@ function getSubjects() {
         solutionType.removeChild(solutionType.firstChild);
     }
     //get the data from the api
-    fetch("https://rory-api.herokuapp.com/allSubjects")
+    fetch("https://api.rory.solutions/allSubjects")
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -50,7 +50,7 @@ function getUnit() {
         }
 
     }
-    fetch("https://rory-api.herokuapp.com/unit/" + subject)
+    fetch("https://api.rory.solutions/unit/" + subject)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -85,7 +85,7 @@ function getType() {
         solutionType.removeChild(solutionType.firstChild);
     }
     //get the data from the api
-    fetch("https://rory-api.herokuapp.com/solutionTypeOfUnit/" + subject + "/" + unit)
+    fetch("https://api.rory.solutions/solutionTypeOfUnit/" + subject + "/" + unit)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -115,7 +115,7 @@ function getResult() {
         resultDiv.removeChild(resultDiv.firstChild);
     }
 
-    fetch("https://rory-api.herokuapp.com/solution/" + selectedUnit + "/" + selectedType.value + "/" + selectedSubject)
+    fetch("https://api.rory.solutions/solution/" + selectedUnit + "/" + selectedType.value + "/" + selectedSubject)
         .then(response => response.json())
         .then(data => {
             for (let index = 0; index < data.length; index++) {
