@@ -15,7 +15,7 @@ function getSubjects() {
         solutionType.removeChild(solutionType.firstChild);
     }
     //get the data from the api
-    fetch("http://api.rory.solutions/allSubjects")
+    fetch("https://api.rory.solutions/allSubjects")
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -50,7 +50,7 @@ function getUnit() {
         }
 
     }
-    fetch("http://api.rory.solutions/unit/" + subject)
+    fetch("https://api.rory.solutions/unit/" + subject)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -85,7 +85,7 @@ function getType() {
         solutionType.removeChild(solutionType.firstChild);
     }
     //get the data from the api
-    fetch("http://api.rory.solutions/solutionTypeOfUnit/" + subject + "/" + unit)
+    fetch("https://api.rory.solutions/solutionTypeOfUnit/" + subject + "/" + unit)
         .then(response => response.json())
         .then(data => {
             console.log(data);
