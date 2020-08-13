@@ -39,7 +39,7 @@ function getMajor() {
 function getSubjects() {
     //load the elements to be used later
     let major = document.getElementById("dropdownMajor").value;
-    let dropdown = document.getElementById("dropdownSubject");
+    let subject = document.getElementById("dropdownSubject");
     try {
         //remove any Items in all DropDown Lists
         $("#dropdownSubject").empty();
@@ -60,7 +60,7 @@ function getSubjects() {
                     opt.value = data[index].COURSE_ID;
                     opt.className = "dropdown-item";
                     opt.id = "subject";
-                    dropdown.appendChild(opt);
+                    subject.appendChild(opt);
                 }
                 getUnit();
             });
@@ -79,7 +79,7 @@ function getUnit() {
             .then(response => response.json())
             .then(data => {
 
-                var dropdown = document.getElementById("dropdownUnit");
+                var unit = document.getElementById("dropdownUnit");
                 for (let index = 0; index < data.length; index++) {
                     // create new option element
                     var opt = document.createElement("option");
@@ -89,9 +89,8 @@ function getUnit() {
                     //set the class name of the element
                     opt.className = "dropdown-item";
                     //add the data to the emelemt
-                    dropdown.appendChild(opt);
+                    unit.appendChild(opt);
                 }
-                document.getElementById("dropdownUnit").selectedIndex = "4";
                 getType();
             });
     } catch (err) {
@@ -113,7 +112,7 @@ function getType() {
             .then(response => response.json())
             .then(data => {
 
-                var dropdown = document.getElementById("dropdownSolutionType");
+                var subjectType = document.getElementById("dropdownSolutionType");
                 //create element for each data in the api
                 for (let index = 0; index < data.length; index++) {
                     //create new option element
@@ -124,7 +123,7 @@ function getType() {
                     //set the class name of the element 
                     opt.className = "dropdown-item";
                     //add the element to solutionType
-                    dropdown.appendChild(opt);
+                    subjectType.appendChild(opt);
                 }
             });
     } catch (err) {
