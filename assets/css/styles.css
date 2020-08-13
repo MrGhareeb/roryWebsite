@@ -19,8 +19,14 @@ option {
     background-color: white !important;
 }
 
+#dropdownMajor {
+    width: 8em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
 #dropdownSubject {
-    width: 12em;
+    width: 8em;
     margin-top: 1em;
 }
 
@@ -31,6 +37,7 @@ option {
 }
 
 #dropdownSolutionType {
+    width: 8em;
     margin-top: 1em;
     margin-left: 1em;
 }
@@ -41,6 +48,11 @@ option {
     margin-left: 1em;
     margin-top: 1em;
     font-size: 16px;
+}
+
+#link {
+    text-decoration: none;
+    color: white;
 }
 
 .card {
@@ -91,15 +103,19 @@ pre {
 
 @media screen and (max-width: 600px) {
     #dropdownSubject {
-        width: 5em;
+        width: 3.5em;
         margin-top: 1em;
     }
     #dropdownUnit {
-        width: 5em;
+        width: 3.5em;
         margin-top: 1em;
     }
     #dropdownSolutionType {
-        width: 5em;
+        width: 3.5em;
+        margin-top: 1em;
+    }
+    #dropdownMajor {
+        width: 3.5em;
         margin-top: 1em;
     }
 }

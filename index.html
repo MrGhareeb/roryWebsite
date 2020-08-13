@@ -20,6 +20,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home page</title>
@@ -27,7 +47,7 @@
 <!--start of the body-->
 <!--Load the subject data from the api-->
 
-<body onload="getSubjects()">
+<body onload="getMajor()">
 
     <!--Navigation bar-->
     <nav class="navbar navbar-light navbar-expand-md navigation-clean">
@@ -62,22 +82,30 @@
 
     <!--Div to center the dropDown Menus-->
     <div class="d-flex justify-content-center" id="dropdown">
+        <!--Major Dropdown List-->
+        <div class="btn-group" id="major">
+            <!--Select tag will house the major data from the database-->
+            <select class="btn btn-secondary dropdown-toggle" id="dropdownMajor" name="selectedMajor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="getSubjects()">
+        <option>Major</option>
+      </select>
+        </div>
         <!--Subject Dropdown List-->
         <div class="btn-group" id="subjects">
-            <!--Select tag will house the subject data from the dataBase-->
+            <!--Select tag will house the subject data from the database-->
             <select class="btn btn-danger dropdown-toggle" id="dropdownSubject" name="selectedSubject" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="getUnit()">
         <option>Subject</option>
       </select>
         </div>
         <!--Unit DropDown List-->
         <div class="btn-group" id="Unit">
-        </div>
-        <!--Select tag will house the subject data from the dataBase-->
-        <select class="btn btn-info dropdown-toggle" id="dropdownUnit" name="selectedUnit" onchange="getType()">
+            <!--Select tag will house the Unit data from the database-->
+            <select class="btn btn-info dropdown-toggle" id="dropdownUnit" name="selectedUnit" onchange="getType()">
       <option>Unit</option>
     </select>
+        </div>
         <!--Solution Type DropDown List-->
         <div class="btn-group" id="SolutionType">
+            <!--Select tag will house the solution type data from the database-->
             <select class="btn btn-primary dropdown-toggle" id="dropdownSolutionType" name="selectedType">
         <option>Solution Type</option>
       </select>
@@ -87,12 +115,13 @@
             <button id="submitButton" class="btn btn-primary submit" data-bs-hover-animate="pulse" type="submit"><a
           id="submit" onclick="getResult()">Submit</a></button>
         </div>
-
     </div>
+
     <!--result Card-->
     <div class="justify-content-center" id="resultDiv">
-
     </div>
+
+
 
 </body>
 
