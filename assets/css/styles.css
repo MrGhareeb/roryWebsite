@@ -16,12 +16,14 @@
 }
 
 #indicatorDiv {
+    margin-top: 1em;
     width: 80vw;
     max-width: 25em;
     text-align: center;
 }
 
 #indicator {
+    margin-top: 0.3em;
     width: 100%;
 }
 
