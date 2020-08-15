@@ -15,39 +15,18 @@
     color: chocolate;
 }
 
+#indicatorDiv {
+    width: 80vw;
+    max-width: 25em;
+    text-align: center;
+}
+
+#indicator {
+    width: 100%;
+}
+
 option {
     background-color: white !important;
-}
-
-#dropdownMajor {
-    width: 8em;
-    margin-right: 1em;
-    margin-top: 1em;
-}
-
-#dropdownSubject {
-    width: 8em;
-    margin-top: 1em;
-}
-
-#dropdownUnit {
-    width: 8em;
-    margin-left: 1em;
-    margin-top: 1em;
-}
-
-#dropdownSolutionType {
-    width: 8em;
-    margin-top: 1em;
-    margin-left: 1em;
-}
-
-#submitButton {
-    border: none;
-    color: white;
-    margin-left: 1em;
-    margin-top: 1em;
-    font-size: 16px;
 }
 
 #link {
@@ -72,19 +51,19 @@ option {
 
 pre {
     /*background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-left: 3px solid green;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;*/
+      border: 1px solid #ddd;
+      border-left: 3px solid green;
+      color: #666;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+      max-width: 100%;
+      overflow: auto;
+      padding: 1em 1.5em;
+      display: block;
+      word-wrap: break-word;*/
     display: block;
     border-left: 4px solid #dc3545;
     padding: 20px;
@@ -101,24 +80,26 @@ pre {
     color: white;
 }
 
-@media screen and (max-width: 600px) {
+
+/* 
+  @media screen and (max-width: 600px) {
     #dropdownSubject {
-        width: 3.5em;
-        margin-top: 1em;
+      width: 3.5em;
+      margin-top: 1em;
     }
     #dropdownUnit {
-        width: 3.5em;
-        margin-top: 1em;
+      width: 3.5em;
+      margin-top: 1em;
     }
     #dropdownSolutionType {
-        width: 3.5em;
-        margin-top: 1em;
+      width: 3.5em;
+      margin-top: 1em;
     }
     #dropdownMajor {
-        width: 3.5em;
-        margin-top: 1em;
+      width: 3.5em;
+      margin-top: 1em;
     }
-}
+  } */
 
 
 /*admin page*/
@@ -129,7 +110,7 @@ body {
 
 .main-head {
     height: 150px;
-    background: #FFF;
+    background: #fff;
 }
 
 .sidenav {
@@ -190,4 +171,30 @@ body {
 .btn-black {
     background-color: #000 !important;
     color: #fff;
+}
+
+
+/* dropdown flex row */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.btn-group>select {
+    /* min-width: 10em; */
+    max-width: 10em;
+    margin: 0.5em 0.5em;
+}
+
+.flex-items-default {
+    width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
 }

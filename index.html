@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
 
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/Brands.css">
-    <link rel="stylesheet" href="css/Projects-Clean.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/Brands.css" />
+    <link rel="stylesheet" href="css/Projects-Clean.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
     <script src="/js/fetch.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
@@ -20,22 +20,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -45,81 +32,119 @@
 <!--Load the subject data from the api-->
 
 <body onload="getMajor()">
-
     <!--Navigation bar-->
     <nav class="navbar navbar-light navbar-expand-md navigation-clean">
         <!--Company Logo-->
         <div class="container">
-            <a href="/"><img src="img/logo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-          class="navbar-toggler-icon"></span></button>
+            <a href="/"><img src="img/logo.png" /></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
             <!--Links to other Pages-->
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" id="discord_link" href="https://discordapp.com/oauth2/authorize?client_id=696730695174979614&amp;scope=bot&amp;permissions=1">discord
-              bot link</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" id="sourceCode" href="https://github.com/MrGhareeb/roryWebsite">source code</a>
-                    </li>
-                </ul>
-            </div>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="discord_link" href="https://discordapp.com/oauth2/authorize?client_id=696730695174979614&amp;scope=bot&amp;permissions=1">discord bot link</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="sourceCode"
+                href="https://github.com/MrGhareeb/roryWebsite"
+                >source code</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!--Description of the project-->
     <div class="projects-clean">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Project Rory</h2>
-                <p class="text-center">Project rory started as discord bot and has been expanded into a website. the project was created to help study database 2 labs and activitys as will as makes them accessible anytime when they are needed.
-                </p>
-            </div>
+      <div class="container">
+        <div class="intro">
+          <h2 class="text-center">Project Rory</h2>
+          <p class="text-center">
+            Project rory started as discord bot and has been expanded into a
+            website. the project was created to help study database 2 labs and
+            activitys as will as makes them accessible anytime when they are
+            needed.
+          </p>
         </div>
+      </div>
     </div>
     <!--Massage to the user that idenicate to choose the solution-->
-    <small class="form-text text-info d-flex justify-content-center"><strong>choose&nbsp;what solution do you
-      need:</strong></small>
-
-    <!--Div to center the dropDown Menus-->
-    <div class="d-flex justify-content-center" id="dropdown">
-        <!--Major Dropdown List-->
-        <div class="btn-group" id="major">
-            <!--Select tag will house the major data from the database-->
-            <select class="btn btn-secondary dropdown-toggle" id="dropdownMajor" name="selectedMajor" onchange="getSubjects()">
-        <option>Major</option>
-      </select>
-        </div>
-        <!--Subject Dropdown List-->
-        <div class="btn-group" id="subjects">
-            <!--Select tag will house the subject data from the database-->
-            <select class="btn btn-danger dropdown-toggle" id="dropdownSubject" name="selectedSubject" onchange="getUnit()">
-        <option>Subject</option>
-      </select>
-        </div>
-        <!--Unit DropDown List-->
-        <div class="btn-group" id="Unit">
-            <!--Select tag will house the Unit data from the database-->
-            <select class="btn btn-info dropdown-toggle" id="dropdownUnit" name="selectedUnit" onchange="getType()">
-      <option>Unit</option>
-    </select>
-        </div>
-        <!--Solution Type DropDown List-->
-        <div class="btn-group" id="SolutionType">
-            <!--Select tag will house the solution type data from the database-->
-            <select class="btn btn-primary dropdown-toggle" id="dropdownSolutionType" name="selectedType">
-        <option>Solution Type</option>
-      </select>
-        </div>
-        <!--Submit Button-->
-        <div class="btn-group">
-            <button id="submitButton" class="btn btn-primary submit" data-bs-hover-animate="pulse" type="submit"><a
-          id="submit" onclick="getResult()">Submit</a></button>
-        </div>
+    <small class="form-text text-info d-flex justify-content-center"
+      ><strong>choose&nbsp;what solution do you need:</strong></small
+    >
+    <!--div for the img indicator-->
+    <div class="" id="indicatorDiv" style="margin: 0 auto;">
+      <img id="indicator" src="img/indicator.png" />
     </div>
+    <!-- Div to center the dropDown Menus -->
+    <div class="flex-container" id="dropdown">
+      <!--Major Dropdown List-->
+      <div class="btn-group" id="major">
+        <!--Select tag will house the major data from the database-->
+        <select
+          class="btn btn-secondary dropdown-toggle"
+          id="dropdownMajor"
+          name="selectedMajor"
+          onchange="getSubjects()"
+        >
+          <option>Major</option>
+        </select>
+      </div>
+      <!--Subject Dropdown List-->
+      <div class="btn-group" id="subjects">
+        <!--Select tag will house the subject data from the database-->
+        <select
+          class="btn btn-danger dropdown-toggle"
+          id="dropdownSubject"
+          name="selectedSubject"
+          onchange="getUnit()"
+        >
+          <option>Subject</option>
+        </select>
+      </div>
+      <!--Unit DropDown List-->
+      <div class="btn-group" id="Unit">
+        <!--Select tag will house the Unit data from the database-->
+        <select
+          class="btn btn-info dropdown-toggle"
+          id="dropdownUnit"
+          name="selectedUnit"
+          onchange="getType()"
+        >
+          <option>Unit</option>
+        </select>
+      </div>
+      <!--Solution Type DropDown List-->
+      <div class="btn-group" id="SolutionType">
+        <!--Select tag will house the solution type data from the database-->
+        <select
+          class="btn btn-primary dropdown-toggle"
+          id="dropdownSolutionType"
+          name="selectedType"
+        >
+          <option>Solution Type</option>
+        </select>
+      </div>
+      <!--Submit Button-->
+      <div class="btn-group">
+        <button
+          id="submitButton"
+          class="btn btn-primary submit"
+          data-bs-hover-animate="pulse"
+          type="submit"
+        >
+          <a id="submit" onclick="getResult()">Submit</a>
+                        </button>
+            </div>
+        </div>
 
-    <!--result Card-->
-    <div class="justify-content-center" id="resultDiv">
-    </div>
-
-
-
+        <!--result Card-->
+        <div class="justify-content-center" id="resultDiv"></div>
 </body>
 
 </html>

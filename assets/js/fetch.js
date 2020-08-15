@@ -78,7 +78,6 @@ function getUnit() {
         fetch("https://api.rory.solutions/unit/" + subject)
             .then(response => response.json())
             .then(data => {
-
                 var unit = document.getElementById("dropdownUnit");
                 for (let index = 0; index < data.length; index++) {
                     // create new option element
