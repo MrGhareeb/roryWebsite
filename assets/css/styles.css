@@ -16,7 +16,6 @@
 }
 
 #indicatorDiv {
-    margin-top: 1em;
     width: 80vw;
     max-width: 25em;
     text-align: center;
@@ -199,4 +198,8 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 0;
+}
+
+#submitButton {
+    margin-left: 0.5em;
 }
