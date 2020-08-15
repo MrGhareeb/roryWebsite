@@ -185,7 +185,7 @@ function getResult() {
         })
 
     function massage() {
-        alert("Download has Started");
+        //alert("Download has Started");
         //var alertDiv = document.getElementById("alert");
         //alertDiv.style = "background-color: #f44336;";
         //var span = document.createElement("span");
